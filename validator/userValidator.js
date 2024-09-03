@@ -19,7 +19,7 @@ const signInSchema = Joi.object({
 // Joi schema for signup validation
 const editSchema = Joi.object({
   email: Joi.string().email().required(),
-  fullName: Joi.string(),
+  fullname: Joi.string(),
   password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required().min(6),
 });
 //Joi schema for creating hotel
