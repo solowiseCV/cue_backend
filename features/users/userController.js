@@ -42,6 +42,8 @@ export default class UserController {
         const token = generateAuthToken(createdUser);
         res.cookie("token", token, {
             httpOnly: true,
+            secure: true,    // Ensures the cookie is only sent over HTTPS
+            sameSite: 'Strict',
             maxAge: 3 * 24 * 60 * 60 * 1000
         });
         return res.status(201)

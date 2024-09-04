@@ -7,6 +7,7 @@ import rentalRoute from './rentals/rentalRoute.js'
 import paymentRoute from './payments/paymentRoute.js'
 import locationRoute from './hotels/locations/locationRoute.js'
 import cartRoute from './cart/cartRoute.js'
+import inviteRoute from './invite/inviteRoute.js'
 export default (appRouter) => {
   appRouter.use("/users",userRoute);
   appRouter.use("/payments",paymentRoute);
@@ -18,5 +19,6 @@ export default (appRouter) => {
   appRouter.use("/rentals",rentalRoute);
   appRouter.use("/locations",locationRoute);
   appRouter.use("/carts",cartRoute);
+  appRouter.use("/invites",inviteRoute);
   return appRouter;
 };
