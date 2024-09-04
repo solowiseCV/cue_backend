@@ -5,6 +5,6 @@ import authenticate from '../../middlewares/auth.middle.js';
 
 const router = express.Router();
 
-router.post('/send-invitation', sendTripInvitation);
+router.post('/send-invitation',authenticate, sendTripInvitation);
 
 export default router;

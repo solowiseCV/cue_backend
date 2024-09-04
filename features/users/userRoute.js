@@ -26,7 +26,7 @@ userRouter.get("/:userId", authenticate, getUserById);
 
 userRouter.get("/", authenticate, getUsers);
 
-userRouter.patch("/:userId", validateEdit, editUserById);
+userRouter.patch("/:userId",authenticate, validateEdit, editUserById);
 
 userRouter.delete("/:userId", authenticate, deleteById);
 

@@ -10,7 +10,7 @@ export const sendTripInvitation = async (req, res) => {
     const currentUser = req.user;
 
     const capitalizedFullName = capitalizeFirstLetter(currentUser.fullname);
-
+ console.log(capitalizeFirstLetter);
     const emailData = {
       email: friendEmail,
       subject: `Invitation to join a trip on ${tripDetails.destination}`,
